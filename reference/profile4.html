@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student Details</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="profile2.css">
+    </head>
+    <body onload='document.text1.focus()'>
+        <div class="container-fluid">
+          
+            <div class="row d-flex justify-content-center">
+              
+                
+                <div class=" col-sm-8 nm ">
+                    
+                    <form class="form-container " action="/action_page.php">
+                        <div class="rait">
+                            <center></center>
+                           </div >                         
+                            <div class="image-upload c1 ">
+                            <label for="img">
+                                <img src="https://dummyimage.com/150x150/a8a8a8/000000.png&text=photo" class="dpp"id="dp">
+                            </label>
+                            <input id="img" type="file" onchange="validateImage()">
+                             </div>
+                             <div class="container c4 cont1">
+                           
+                        
+                         <div class="c3">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="studentName" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="rollno">Roll no</label>
+                                <input type="text" class="form-control" id="rollno" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="phoeno">Phone no</label>
+                                <input type="text" class="form-control" id="phoneno" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Id</label>
+                                <input type="text" class="form-control" id="email" disabled>
+                            </div>
+                            
+                            
+                       
+                
+                         
+                         <div class="col text-center">
+                            <a href=#><input type="submit" class="btn btn-default btn-2 btn-lg">
+                             </a>   
+                            </div>
+                           </div>
+
+                           </div>
+                           
+                            
+
+                           
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            function validateImage() {
+                var formData = new FormData();
+                var reader=new FileReader();
+                var dp=document.getElementById("dp");
+                var file = document.getElementById("img").files[0];
+             
+                formData.append("Filedata", file);
+                var t = file.type.split('/').pop().toLowerCase();
+                if (t != "png") {
+                    alert('Please select a valid image file');
+                    document.getElementById("img").value = '';
+                    return false;
+                }
+                if ((file.size/1000) > 250) {
+                    alert('Max Upload size is 250KB only');
+                    document.getElementById("img").value = '';
+                    return false;
+                }
+                else if((file.size/1000)< 250){
+                    reader.onload = function(e)  {
+                        var image = document.createElement("img");
+                        image.src = e.target.result;
+                       
+                       
+                       image.style.width='200px';
+                       
+                        dp.src=image.src;
+                        dp.style.width='150px';
+                        dp.style.height='150px';
+
+                        
+                     }
+                     reader.readAsDataURL(file);
+                    return true;
+                }
+                
+            }
+            </script>
+    </body>
+</html>

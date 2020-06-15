@@ -1,0 +1,115 @@
+*
+{
+    color: aliceblue;
+
+}
+body{
+  background: linear-gradient(to left,#D62121, #C72C2C,#3a1111);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+ 
+    width: 100%;
+    height: 800px;
+}
+
+.ti
+{
+  text-align: center;
+  align-content: center;
+  color:  #E3BC9A;
+  text-shadow:2px 2px  black;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-top: 5%;
+}
+.rait{
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.form-container
+{
+    padding-top: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 2%;
+   
+  
+    margin-top:10%;
+    -webkit-box-shadow: 1px 3px 13px 13px rgba(0,0,0,0.25);
+    -moz-box-shadow: 1px 3px 13px 13px rgba(0,0,0,0.25);
+    box-shadow: 1px 3px 15px 7px rgba(0,0,0,0.75);
+    background-color:  #E3BC9A;
+    border-radius: 30px;
+    
+   
+    &:valid
+    {
+        background:url(img/check.svg);
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: 20px 20px;
+        & + label
+        {
+          opacity: 0;
+        } 
+    }
+}
+.l1{
+  margin-bottom: 15px;
+}
+.txt-color{
+  color: #a00322;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .cta {
+    position: relative;
+    margin: 80px 150px;
+    padding: 19px 22px;
+    transition: all 0.2s ease;
+  }
+  
+  .cta span {
+    position: relative;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 900;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    vertical-align: middle;
+  }
+  .cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #111;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+  }
+  
+  
+  .cta:active {
+    transform: scale(0.96);
+  }
+  @media only screen 
+  and (min-device-width : 768px) 
+  and (max-device-width : 1024px) 
+  and (orientation : landscape) { /* STYLES GO HERE */}
+  @media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) { /* STYLES GO HERE */ }
+
+.btn-2 {
+  background: #a00322;
+  margin-bottom: 0px;
+  color: #ffff;
+}
